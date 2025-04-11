@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.store</groupId>
+  <artifactId>MountainTopLiquor</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>MountainTopLiquor</name>
+  <description>Root Maven Project</description>
+  
+  <modules>
+  <module>SharedLibrary</module>
+  <module>Customer</module>
+  <module>Admin</module>
+  </modules>
+  
+</project>
