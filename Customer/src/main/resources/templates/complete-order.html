@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head th:replace="fragmenta :: head-link"></head>
+
+<body>
+
+<div th:replace="fragmenta :: preloader"></div>
+
+<div id="main-wrapper">
+
+	<div th:replace="fragmenta :: top-header"></div>
+
+	<div th:replace="fragmenta :: title-menu"></div>
+
+	<div class="clearfix"></div>
+
+	<!-- ======================= Product Detail ======================== -->
+	<section class="middle">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-10 col-lg-8 col-xl-6 text-center">
+
+					<!-- Icon -->
+					<div class="p-4 d-inline-flex align-items-center justify-content-center circle bg-light-success text-success mx-auto mb-4"><i class="lni lni-heart-filled fs-lg"></i></div>
+					<!-- Heading -->
+					<h2 class="mb-2 ft-bold">Your Order is Successfully Placed!</h2>
+					<!-- Text -->
+					<p class="ft-regular fs-md mb-5">Your order has been completed. Your order details are shown for your personal account. Please complete your payment after accepted.</p>
+					<!-- Button -->
+					<a class="btn btn-dark" th:href="@{/order}" >Complete Your Payment</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section th:replace="fragmenta :: features"></section>
+
+	<footer th:replace="fragmenta :: footer"></footer>
+
+	<!-- Back to top -->
+	<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+
+</div>
+
+<div th:replace="fragmenta :: scripts"></div>
+
+<!-- CSS for smooth scrolling and layout fixes -->
+<style>
+	/* Ensure smooth scrolling */
+	html, body {
+		overflow-x: hidden;  /* Prevent horizontal scrolling */
+		scroll-behavior: smooth;  /* Native browser smooth scrolling */
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Adjust for fixed headers and prevent shaking */
+	#main-wrapper {
+		padding-top: 100px; /* Adjust this to your fixed header height */
+	}
+
+	/* Prevent layout shifts on images */
+	img {
+		width: 100%;
+		height: auto; /* Prevent aspect ratio issues */
+	}
+
+	/* Optional: Style for the back-to-top button */
+	#back2Top {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		background-color: #000;
+		color: white;
+		padding: 10px;
+		border-radius: 50%;
+		display: none;
+		z-index: 1000;
+	}
+
+	/* Show back-to-top button on scroll */
+	window.addEventListener('scroll', function() {
+		let backToTopButton = document.getElementById('back2Top');
+		if (window.scrollY > 200) {
+			backToTopButton.style.display = 'block';
+		} else {
+			backToTopButton.style.display = 'none';
+		}
+	});
+</style>
+
+</body>
+
+</html>
